@@ -9,22 +9,22 @@ const Navbar = () => {
     return (
         <div className="bg-blue-600 order-last flex justify-around md:h-screen md:flex-col md:order-first md:py-0 md:px-3">
             
-            <NavLink activeClassName="bg-blue-800 rounded-md" to="/">
+            <NavLink activeClassName="bg-blue-800 rounded-md" to="/home">
                 <LabeledIcon                    
                     component={faHome}
                     text="Inicio" />
             </NavLink>
-            <NavLink activeClassName="bg-blue-800 rounded-md" to="/a">
+            <NavLink activeClassName="bg-blue-800 rounded-md" to="/services">
                 <LabeledIcon
                     component={faMotorcycle}
                     text="Servicios" />
             </NavLink>
-            <NavLink activeClassName="bg-blue-800 rounded-md" to="/b">
+            <NavLink activeClassName="bg-blue-800 rounded-md" to="/statistics">
                 <LabeledIcon
                     component={faDollarSign}
                     text="Estadísticas" />
             </NavLink>
-            <NavLink activeClassName="bg-blue-800 rounded-md" to="/c">
+            <NavLink activeClassName="bg-blue-800 rounded-md" to="/chats">
                 <LabeledIcon
                     component={faComments}
                     text="Mensajes" />

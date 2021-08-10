@@ -2,7 +2,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const StarRate: React.FC<{
-    rate: number
+    rate: number,
+    className?: string
 }> = (props) => {
 
     let stars: JSX.Element[] = []    
@@ -12,7 +13,7 @@ const StarRate: React.FC<{
     }
     
     return (
-        <div>
+        <div className={`${props.className}`}>
             {stars}
         </div>
     )
