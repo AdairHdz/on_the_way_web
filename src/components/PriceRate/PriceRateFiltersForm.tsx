@@ -31,7 +31,7 @@ const PriceRateFiltersForm = () => {
             }} >
             <Form>
                 <p className="text-lg text-center font-bold mb-5">Tipo de servicio</p>
-                <div className="w-2/3 mx-auto text-center md:flex md:justify-between">
+                <div className="w-full mx-auto text-center md:flex md:justify-between">
                     <div className="md:flex-grow">
                         <CheckboxInput
                             id="delivery"

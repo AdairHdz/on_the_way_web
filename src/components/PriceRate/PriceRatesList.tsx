@@ -23,7 +23,18 @@ const PriceRatesList = () => {
             "07:00 - 09:00 P.M.",
             KindOfService.GROCERY_SHOPPING
         ),
-
+        new PriceRate(
+            [WorkingDay.MONDAY, WorkingDay.FRIDAY],
+            "Xalapa",
+            "07:00 - 02:30 P.M.",
+            KindOfService.DELIVERY
+        ),
+        new PriceRate(
+            [WorkingDay.FRIDAY, WorkingDay.SATURDAY, WorkingDay.SUNDAY],
+            "Xalapa",
+            "07:00 - 09:00 P.M.",
+            KindOfService.GROCERY_SHOPPING
+        ),
     ]    
 
     const [dropdownIsActive, setDropdownIsActive] = useState(false)
@@ -34,7 +45,7 @@ const PriceRatesList = () => {
 
     return (
         <>
-        <div className="w-full md:mt-10 md:w-11/12 md:mx-auto p-5 relative">
+        <div className="w-full md:mt-10 md:w-11/12 md:mx-auto p-5 relative max-h-screen overflow-y-scroll">
             <p className="text-2xl mb-5 font-bold">Tarifas</p>
             <DropdownButton
                 isActive={dropdownIsActive}
