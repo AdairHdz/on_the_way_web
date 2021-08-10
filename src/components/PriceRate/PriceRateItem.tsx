@@ -32,7 +32,7 @@ const PriceRateItem: React.FC<{
     return (
         <div className="shadow-md rounded-lg p-5 text-gray-800 mb-5">
             <div className="flex gap-2">
-                {props.priceRate.workingDays.map(workingDay => <WorkingDayBadge workingDay={workingDay} />)}
+                {props.priceRate.workingDays.map(workingDay => <WorkingDayBadge key={workingDay} workingDay={workingDay} />)}
             </div>            
             <p className="text-lg font-bold"> {props.priceRate.city} </p>
             <p className="font-bold"> {props.priceRate.schedule} </p>

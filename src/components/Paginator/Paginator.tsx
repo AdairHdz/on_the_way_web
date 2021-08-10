@@ -8,7 +8,6 @@ const Paginator = () => {
             <Link to="/">
                 <FontAwesomeIcon icon={faStepBackward} />
             </Link>
-
             <Link to="/">
                 <FontAwesomeIcon icon={faChevronLeft} />
             </Link>

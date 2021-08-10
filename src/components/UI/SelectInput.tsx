@@ -9,10 +9,12 @@ const SelectInput: React.FC<{
     const [fieldProps, metadata] = useField({name: props.name})
 
     return (
-        <div className="mb-5">
+        <div className="mb-5 text-left">
             {props.label && (
                 <>
-                    <label htmlFor={props.id || props.name}> {props.label} </label>
+                    <label htmlFor={props.id || props.name} className="mb-2 inline-block">
+                        {props.label}
+                    </label>
                     <br />
                 </>
             )}

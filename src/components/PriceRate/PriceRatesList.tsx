@@ -5,6 +5,9 @@ import Paginator from "../Paginator/Paginator"
 import PriceRateItem from "./PriceRateItem"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus } from "@fortawesome/free-solid-svg-icons"
+import DropdownButton from "../UI/DropdownButton"
+import { useState } from "react"
+import PriceRateFiltersForm from "./PriceRateFiltersForm"
 
 const PriceRatesList = () => {
     const priceRates = [
@@ -22,10 +25,23 @@ const PriceRatesList = () => {
         ),
 
     ]    
+
+    const [dropdownIsActive, setDropdownIsActive] = useState(false)
+
+    const toggleHandler = () => {
+        setDropdownIsActive((prevState => !prevState))
+    }
+
     return (
         <>
         <div className="w-full md:mt-10 md:w-11/12 md:mx-auto p-5 relative">
             <p className="text-2xl mb-5 font-bold">Tarifas</p>
+            <DropdownButton
+                isActive={dropdownIsActive}
+                textWhenActive="Ocultar filtros"
+                textWhenInactive="Más filtros"
+                toggleHandler={toggleHandler} />
+            { dropdownIsActive && <PriceRateFiltersForm />  }
             {priceRates.map(priceRate => (
                 <PriceRateItem
                 priceRate={priceRate} />
