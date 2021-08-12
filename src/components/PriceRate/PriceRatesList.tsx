@@ -9,6 +9,7 @@ import DropdownButton from "../UI/DropdownButton"
 import { useState } from "react"
 import PriceRateFiltersForm from "./PriceRateFiltersForm"
 
+
 const PriceRatesList: React.FC<{
     openModalHandler: () => void
 }> = (props) => {
