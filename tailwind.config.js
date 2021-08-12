@@ -5,7 +5,11 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["checked", "active"],
+      borderColor: ["checked"],
+      textColor: ["checked"]
+    },
   },
   plugins: [
     require("@tailwindcss/forms")

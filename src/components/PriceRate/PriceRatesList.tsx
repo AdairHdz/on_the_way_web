@@ -9,7 +9,9 @@ import DropdownButton from "../UI/DropdownButton"
 import { useState } from "react"
 import PriceRateFiltersForm from "./PriceRateFiltersForm"
 
-const PriceRatesList = () => {
+const PriceRatesList: React.FC<{
+    openModalHandler: () => void
+}> = (props) => {
     const priceRates = [
         new PriceRate(
             [WorkingDay.MONDAY, WorkingDay.FRIDAY],
@@ -45,8 +47,7 @@ const PriceRatesList = () => {
 
     return (
         <>
-        <div className="w-full md:mt-10 md:w-11/12 md:mx-auto p-5 relative max-h-screen overflow-y-scroll">
-            <p className="text-2xl mb-5 font-bold">Tarifas</p>
+        <div className="w-full md:mt-5 md:w-11/12 md:mx-auto px-5 py-5 max-h-screen overflow-y-scroll">            
             <DropdownButton
                 isActive={dropdownIsActive}
                 textWhenActive="Ocultar filtros"
@@ -58,7 +59,9 @@ const PriceRatesList = () => {
                 priceRate={priceRate} />
             ))}
             
-            <div className="bg-yellow-500 text-white rounded-full h-10 w-10 absolute bottom-5 right-5 flex justify-center items-center cursor-pointer">
+            <div
+            className="bg-yellow-500 text-white rounded-full h-10 w-10 absolute bottom-20 right-10 flex justify-center items-center cursor-pointer"
+            onClick={props.openModalHandler}>
                 <span className="inline-block text-center">
                     <FontAwesomeIcon icon={faPlus} />
                 </span>
